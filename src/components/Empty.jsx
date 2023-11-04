@@ -1,9 +1,10 @@
 import React from "react";
 import ColorPalette from "../assets/color-palette.svg?react";
+import styles from "./Empty.module.css";
 
 const Empty = () => {
   return (
-    <div>
+    <div className={styles.empty}>
       <ColorPalette />
       <p>
         No colors have been entered yet. Please provide a color code to get

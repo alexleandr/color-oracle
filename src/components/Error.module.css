@@ -1,0 +1,12 @@
+.error {
+  width: 100%;
+  max-width: 24rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error p {
+  color: #ff4147;
+}
