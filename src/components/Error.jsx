@@ -1,9 +1,10 @@
 import React from "react";
+import Failure from "../assets/failure.svg?react";
 
 const Error = () => {
   return (
     <div>
-      <div>Error</div>
+      <Failure />
       <p>Only accepts hex code values!</p>
     </div>
   );

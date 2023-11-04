@@ -1,5 +1,6 @@
 import React from "react";
 import Empty from "./Empty";
+import Arrow from "../assets/arrow.svg?react";
 
 const Wrapper = () => {
   return (
@@ -13,7 +14,9 @@ const Wrapper = () => {
 
       <form>
         <input type="text" maxLength="6" />
-        <button type="submit">Arrow</button>
+        <button type="submit">
+          <Arrow />
+        </button>
       </form>
 
       <Empty />
