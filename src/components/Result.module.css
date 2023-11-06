@@ -1,0 +1,23 @@
+.result {
+  width: 100%;
+  max-width: 48rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.yourColor {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.colors {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

@@ -1,6 +1,5 @@
 .wrapper {
   width: 100%;
-  max-width: 30rem;
   padding: 3.5rem 1rem 0 1rem;
   display: flex;
   flex-direction: column;
@@ -26,8 +25,9 @@
 
 .search {
   width: 100%;
+  max-width: 30rem;
   border-radius: 6px;
-  outline: 1px solid #bebebe;
+  border: 1px solid #bebebe;
   display: grid;
   grid-template-columns: 1fr auto;
 }

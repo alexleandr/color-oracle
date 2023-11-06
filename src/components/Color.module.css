@@ -1,0 +1,46 @@
+.color button {
+  position: relative;
+  top: 0;
+  aspect-ratio: 1/1;
+  width: 6rem;
+  height: 6rem;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.color button:hover,
+.color button:focus {
+  top: -0.25rem;
+}
+
+.color button:hover .copy,
+.color button:focus .copy {
+  opacity: 1;
+}
+
+.color div {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1f1f1f;
+  text-align: center;
+}
+
+.copy {
+  padding: 6px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  opacity: 0;
+  transition: 0.3s;
+}

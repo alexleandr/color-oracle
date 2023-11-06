@@ -1,4 +1,6 @@
 import React from "react";
+import Color from "./Color";
+import styles from "./Result.module.css";
 
 // just for UI development
 const colors = [
@@ -27,14 +29,15 @@ const colors = [
 
 const Result = () => {
   return (
-    <ul>
-      <h4>#ff4147</h4>
-      {colors.map((color) => (
-        <li id={color}>
-          <button>{color}</button>
-        </li>
-      ))}
-    </ul>
+    <div className={styles.result}>
+      <h4 className={styles.yourColor}>#ff4147</h4>
+
+      <ul className={styles.colors}>
+        {colors.map((color) => (
+          <Color key={color} hex={color} />
+        ))}
+      </ul>
+    </div>
   );
 };
 
