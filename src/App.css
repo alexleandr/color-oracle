@@ -14,9 +14,9 @@ p {
 
 #root {
   width: 100%;
-  min-height: 100vh;
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: minmax(100vh, auto) auto;
+  grid-template-columns: 1fr;
   justify-content: center;
   background-color: #f1f1f1;
   text-align: center;
