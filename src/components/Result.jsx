@@ -27,10 +27,12 @@ const colors = [
   "#000000",
 ];
 
-const Result = () => {
+const Result = ({ hexCode }) => {
   return (
     <div className={styles.result}>
-      <h4 className={styles.yourColor}>#ff4147</h4>
+      <h4 className={styles.yourColor}>
+        {hexCode.startsWith("#") ? hexCode : `#${hexCode}`}
+      </h4>
 
       <ul className={styles.colors}>
         {colors.map((color) => (
