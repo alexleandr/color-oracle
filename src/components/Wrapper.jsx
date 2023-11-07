@@ -61,7 +61,9 @@ const Wrapper = () => {
 
       {!result && !error && <Empty />}
       {error && <Error />}
-      {result && <Result hexCode={color} />}
+      {result && (
+        <Result hexCode={color.startsWith("#") ? color : `#${color}`} />
+      )}
     </main>
   );
 };
