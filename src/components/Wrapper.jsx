@@ -49,6 +49,7 @@ const Wrapper = () => {
       <form className={styles.search} onSubmit={handleSubmit}>
         <input
           type="text"
+          placeholder="Enter your Hex code"
           maxLength="7"
           value={color}
           onChange={handleChange}
