@@ -1,8 +1,8 @@
 import React from "react";
+import Input from "./Input";
 import Empty from "./Empty";
 import Error from "./Error";
 import Result from "./Result";
-import Arrow from "../assets/arrow.svg?react";
 import styles from "./Wrapper.module.css";
 
 const Wrapper = () => {
@@ -46,19 +46,11 @@ const Wrapper = () => {
         <p>Enter a Hex color code for a range of color tints and shades</p>
       </div>
 
-      <form className={styles.search} onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Enter your Hex code"
-          maxLength="7"
-          value={color}
-          onChange={handleChange}
-        />
-
-        <button type="submit">
-          <Arrow />
-        </button>
-      </form>
+      <Input
+        handleSubmit={handleSubmit}
+        color={color}
+        handleChange={handleChange}
+      />
 
       {!result && !error && <Empty />}
       {error && <Error />}
