@@ -4,19 +4,25 @@ import styles from "./Input.module.css";
 
 const Input = ({ handleSubmit, color, handleChange }) => {
   return (
-    <form className={styles.input} onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Enter your Hex code"
-        maxLength="7"
-        value={color}
-        onChange={handleChange}
-      />
+    <div className={styles.input}>
+      <form className={styles.inputForm} onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Enter your Hex code"
+          maxLength="7"
+          value={color}
+          onChange={handleChange}
+        />
 
-      <button type="submit">
-        <Arrow />
-      </button>
-    </form>
+        <button type="submit">
+          <Arrow />
+        </button>
+      </form>
+
+      <div className={styles.inputColorPicker}>
+        <button>OR select your own color</button>
+      </div>
+    </div>
   );
 };
 
