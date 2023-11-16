@@ -54,6 +54,13 @@
   background-color: #2b2b2b;
 }
 
+.inputColorPicker {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .inputColorPicker button {
   padding: 6px;
   border: none;
@@ -71,4 +78,10 @@
 .inputColorPicker button:hover,
 .inputColorPicker button:focus {
   background-color: #e7dfbb;
+}
+
+.inputColorPickerSketch {
+  position: absolute;
+  top: 2.5rem;
+  z-index: 1000;
 }

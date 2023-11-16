@@ -7,12 +7,14 @@ import styles from "./Wrapper.module.css";
 
 const Wrapper = () => {
   const [color, setColor] = React.useState("");
+  const [colorPicker, setColorPicker] = React.useState(false);
   const [error, setError] = React.useState(false);
   const [result, setResult] = React.useState(false);
   const regex = /^#([0-9a-f]{6}|[0-9a-f]{3})$/i;
 
   function handleSubmit(ev) {
     ev.preventDefault();
+    setColorPicker(false);
 
     if (color.startsWith("#")) {
       validateRegex(color);
@@ -23,6 +25,7 @@ const Wrapper = () => {
 
   function handleChange({ target }) {
     setColor(target.value);
+    setColorPicker(false);
     setResult(false);
     setError(false);
   }
@@ -49,6 +52,8 @@ const Wrapper = () => {
       <Input
         color={color}
         setColor={setColor}
+        colorPicker={colorPicker}
+        setColorPicker={setColorPicker}
         handleSubmit={handleSubmit}
         handleChange={handleChange}
       />
