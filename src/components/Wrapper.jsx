@@ -47,8 +47,9 @@ const Wrapper = () => {
       </div>
 
       <Input
-        handleSubmit={handleSubmit}
         color={color}
+        setColor={setColor}
+        handleSubmit={handleSubmit}
         handleChange={handleChange}
       />
 

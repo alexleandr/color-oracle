@@ -1,8 +1,9 @@
 import React from "react";
+import Sketch from "@uiw/react-color-sketch";
 import Arrow from "../assets/arrow.svg?react";
 import styles from "./Input.module.css";
 
-const Input = ({ handleSubmit, color, handleChange }) => {
+const Input = ({ color, setColor, handleChange, handleSubmit }) => {
   return (
     <div className={styles.input}>
       <form className={styles.inputForm} onSubmit={handleSubmit}>
@@ -21,6 +22,14 @@ const Input = ({ handleSubmit, color, handleChange }) => {
 
       <div className={styles.inputColorPicker}>
         <button>OR select your own color</button>
+
+        <Sketch
+          color={color}
+          onChange={(color) => {
+            setColor(color.hex);
+          }}
+          disableAlpha={true}
+        />
       </div>
     </div>
   );

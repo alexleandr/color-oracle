@@ -9,7 +9,7 @@ const Result = ({ hexCode }) => {
   React.useEffect(() => {
     let values = new Values(hexCode).all(10);
     setColors(values);
-  }, []);
+  }, [hexCode]);
 
   return (
     <div className={styles.result}>
