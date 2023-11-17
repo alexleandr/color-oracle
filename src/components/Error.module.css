@@ -7,6 +7,6 @@
   gap: 0.5rem;
 }
 
-.error p {
+.errorMessage {
   color: #ff4147;
 }

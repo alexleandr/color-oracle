@@ -11,6 +11,7 @@ const Input = ({
   handleChange,
   handleSubmit,
 }) => {
+  // open and close color picker
   function handleClick({ target }) {
     setColorPicker((current) => !current);
     target.blur();
@@ -39,12 +40,12 @@ const Input = ({
 
         <Sketch
           style={{ display: colorPicker ? "block" : "none" }}
+          className={styles.inputColorPickerSketch}
           color={color}
           onChange={(color) => {
             setColor(color.hex);
           }}
           disableAlpha={true}
-          className={styles.inputColorPickerSketch}
         />
       </div>
     </div>

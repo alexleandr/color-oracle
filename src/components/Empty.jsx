@@ -6,7 +6,8 @@ const Empty = () => {
   return (
     <div className={styles.empty}>
       <ColorPalette />
-      <p>
+
+      <p className={styles.emptyMessage}>
         No colors have been entered yet. Please provide a color code to get
         started.
       </p>

@@ -6,7 +6,8 @@ const Error = () => {
   return (
     <div className={styles.error}>
       <Failure />
-      <p>Only accepts hex code values!</p>
+
+      <p className={styles.errorMessage}>Only accepts hex code values!</p>
     </div>
   );
 };

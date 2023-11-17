@@ -3,19 +3,19 @@ import Values from "values.js";
 import Color from "./Color";
 import styles from "./Result.module.css";
 
-const Result = ({ hexCode }) => {
+const Result = ({ userColor }) => {
   const [colors, setColors] = React.useState([]);
 
   React.useEffect(() => {
-    let values = new Values(hexCode).all(10);
+    let values = new Values(userColor).all(10);
     setColors(values);
-  }, [hexCode]);
+  }, [userColor]);
 
   return (
     <div className={styles.result}>
-      <h4 className={styles.yourColor}>{hexCode}</h4>
+      <h4 className={styles.resultUserColor}>{userColor.toLowerCase()}</h4>
 
-      <ul className={styles.colors}>
+      <ul className={styles.resultColors}>
         {
           /* this ensures we don't render repeated colors */
           colors

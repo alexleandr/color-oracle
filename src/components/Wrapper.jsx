@@ -42,10 +42,11 @@ const Wrapper = () => {
 
   return (
     <main className={styles.wrapper}>
-      <div className={styles.logo}>
+      <div className={styles.wrapperLogo}>
         <h1>
           Color <span>Oracle</span>
         </h1>
+
         <p>Enter a Hex color code for a range of color tints and shades</p>
       </div>
 
@@ -61,7 +62,7 @@ const Wrapper = () => {
       {!result && !error && <Empty />}
       {error && <Error />}
       {result && (
-        <Result hexCode={color.startsWith("#") ? color : `#${color}`} />
+        <Result userColor={color.startsWith("#") ? color : `#${color}`} />
       )}
     </main>
   );

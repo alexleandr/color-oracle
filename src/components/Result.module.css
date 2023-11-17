@@ -7,13 +7,13 @@
   gap: 1.75rem;
 }
 
-.yourColor {
+.resultUserColor {
   font-size: 1rem;
   font-weight: 600;
   color: #1f1f1f;
 }
 
-.colors {
+.resultColors {
   width: 100%;
   list-style: none;
   display: flex;

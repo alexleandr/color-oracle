@@ -4,8 +4,8 @@ import Clipboard from "../assets/clipboard.svg?react";
 import styles from "./Color.module.css";
 
 const Color = ({ hex }) => {
-  const btn = React.useRef();
   const [copied, setCopied] = React.useState(false);
+  const btn = React.useRef();
 
   function handleClick() {
     setCopied(true);
@@ -28,8 +28,8 @@ const Color = ({ hex }) => {
 
   return (
     <li className={styles.color}>
-      <button style={{ backgroundColor: hex }} onClick={handleClick} ref={btn}>
-        <span className={styles.copy}>
+      <button ref={btn} style={{ backgroundColor: hex }} onClick={handleClick}>
+        <span className={styles.colorCopy}>
           {copied ? <ClipboardCheck /> : <Clipboard />}
         </span>
       </button>

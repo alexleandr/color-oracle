@@ -7,18 +7,18 @@
   gap: 1.75rem;
 }
 
-.logo {
+.wrapperLogo {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   color: #1f1f1f;
 }
 
-.logo h1 {
+.wrapperLogo h1 {
   font-size: 2.5rem;
   font-weight: 600;
 }
 
-.logo h1 span {
+.wrapperLogo h1 span {
   color: #af941c;
 }
